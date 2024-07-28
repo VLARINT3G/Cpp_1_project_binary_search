@@ -1,9 +1,9 @@
 //include <iostream>
-da
-wd
+//da
+/*wd
 aw
 
 wd 
 aw
  d
-aw 
+aw*/ 
