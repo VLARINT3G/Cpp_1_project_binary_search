@@ -30,7 +30,7 @@ int bin_reach(const std::vector<int>& bin_reach_arr, int target) {
             right = mid - 1;
         }
     }
-    return -1; // Элемент не найден
+    return left; // Элемент не найден
 }
 
 int main() {
@@ -64,10 +64,10 @@ int main() {
     // Вызов функции бинарного поиска
     int result = bin_reach(main_arr, user_target);
 
-    if (result != -1) {
+    if (result < main_arr.size() && main_arr[result] == user_target) {
         std::cout << "Your element is in " << result + 1 << "-th place" << std::endl;
     } else {
-        std::cout << "Your element is not found" << std::endl;
+        std::cout << "Your element is not found. It could be placed at position " << result + 1 << std::endl;
     }
 
     return 0;
