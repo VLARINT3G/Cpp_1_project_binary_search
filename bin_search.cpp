@@ -65,22 +65,10 @@ int main() {
     int result = bin_reach(main_arr, user_target);
 
     if (result != -1) {
-        std::cout << "Your element is in " << result << " place" << std::endl;
+        std::cout << "Your element is in " << result + 1 << "-th place" << std::endl;
     } else {
-        std::cout << "Your element is not foud" << std::endl;
+        std::cout << "Your element is not found" << std::endl;
     }
 
     return 0;
 }
-
-
-// Использование и std::upper_bound для поиска элемента - старая версия кода  !!!!!!!!!!!!!!
-    // auto lower = std::lower_bound(arr.begin(), arr.end(), target);
-
-    // if (lower != arr.end() && *lower == target) {
-    //     std::cout << "Элемент " << target << " найден в массиве на позиции " 
-    //               << (lower - arr.begin() + 1) << std::endl;
-    // } else {
-    //     std::cout << "Элемент " << target << " не найден в массиве." << std::endl;
-    //     std::cout << "Число может быть вставлено на позицию " << (lower - arr.begin() + 1) << "элемента" << std::endl;
-    // }
