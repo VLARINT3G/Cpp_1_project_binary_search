@@ -3,35 +3,7 @@
 #include <algorithm> // для std::sort
 #include <cstdlib>   // для std::rand и std::srand
 #include <ctime>     // для std::time
-
-// Функция для создания вектора случайных чисел заданной длины
-std::vector<int> createRandomVector(int n) {
-    std::vector<int> vec(n);
-    for (int i = 0; i < n; ++i) {
-        vec[i] = std::rand() % 100; // случайные числа в диапазоне от 0 до 99
-    }
-    return vec;
-}
-
-// Функция бинарного поиска
-int bin_reach(const std::vector<int>& bin_reach_arr, int target) {
-    int left = 0;
-    int right = bin_reach_arr.size() - 1;
-
-    while (left <= right) {
-        int mid = (left + right) / 2;
-
-        if (target == bin_reach_arr[mid]) {
-            return mid; // Возвращаем индекс найденного элемента
-        }
-        if (target > bin_reach_arr[mid]) {
-            left = mid + 1;
-        } else {
-            right = mid - 1;
-        }
-    }
-    return left; // Элемент не найден
-}
+#include "utils.h"
 
 int main() {
     std::srand(std::time(0)); // инициализация генератора случайных чисел

@@ -1,20 +1,31 @@
-# Игнорирование файлов операционной системы
-*.DS_Store
-Thumbs.db
+/build/
+/CMakeFiles/
 
-# Игнорирование логов
-*.log
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
 
-# Игнорирование скомпилированных файлов
-*.class
+*.ninja
+.ninja_deps
+.ninja_log
+
 *.o
-*.so
+*.obj
+*.lo
+*.la
 
-# Игнорирование временных файлов редакторов
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+
 *~
 *.swp
+*.swo
+*.bak
 
-# Игнорирование директорий
-node_modules/
-dist/
-build/
+.vscode/
+.idea/
+*.iml
